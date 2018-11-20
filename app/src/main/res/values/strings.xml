@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Iraimapp</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="sexo">Sexo:</string>
+    <string name="creatina_en_plasma">Creatina \nEn plasma:</string>
+    <string name="peso">Peso:</string>
+    <string name="edad">Edad:</string>
+    <string name="titulo">Estimación usando \n la fórmula Cockcroft-Gault</string>
+    <string name="calcular">Calcular</string>
+    <string name="mg_dl">Mg/dl</string>
+    <string name="kg">Kg</string>
+    <string name="anos">Años</string>
+</resources>
