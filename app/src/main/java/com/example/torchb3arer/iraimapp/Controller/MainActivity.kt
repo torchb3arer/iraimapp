@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.torchb3arer.iraimapp.R
+import com.example.torchb3arer.iraimapp.Utilitarios.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -42,7 +43,46 @@ class MainActivity : AppCompatActivity() {
             }
             val resultado :Double = Math.round(suma * 100.0) / 100.0
 
+            val categoria = Bundle()
+
+
             val activityResultado = Intent(this, Resultado::class.java)
+            when{
+                (resultado <15) -> {
+                    categoria.putString("CATEGORIA",CINCO)
+                    categoria.putString("CATEGORIA_DES",G_CINCO)
+                    activityResultado.putExtras(categoria)
+                }
+
+                (resultado in 15..29) -> {
+                    categoria.putString("CATEGORIA", CUATRO)
+                    categoria.putString("CATEGORIA_DES", G_CUATRO)
+                    activityResultado.putExtras(categoria)
+                }
+                (resultado in 30..44) -> {
+                    categoria.putString("CATEGORIA", TRES_B)
+                    categoria.putString("CATEGORIA_DES", G_TRES_B)
+                    activityResultado.putExtras(categoria)
+                }
+                (resultado in 45..59) -> {
+                    categoria.putString("CATEGORIA", TRES_A)
+                    categoria.putString("CATEGORIA_DES", G_TRES_A)
+                    activityResultado.putExtras(categoria)
+                }
+                (resultado in 60..89) -> {
+                    categoria.putString("CATEGORIA", DOS)
+                    categoria.putString("CATEGORIA_DES", G_DOS)
+                    activityResultado.putExtras(categoria)
+                }
+                (resultado >=90) -> {
+                    categoria.putString("CATEGORIA", UNO)
+                    categoria.putString("CATEGORIA_DES", G_UNO)
+                    activityResultado.putExtras(categoria)
+                }
+            }
+
+
+
             activityResultado.putExtra("RESULTADO",resultado.toString())
             startActivity(activityResultado)
         }

@@ -14,7 +14,12 @@ class Resultado : AppCompatActivity() {
         val entrada = intent.extras
         if (entrada != null) {
             val stringEntrada = entrada.getString("RESULTADO")
-            txtResuFnal.setText(stringEntrada)
+            txtResuFnal.text = stringEntrada+" ml/min"
+            val categoria = entrada.getString("CATEGORIA")
+            val stringCategoria = entrada.getString("CATEGORIA_DES")
+
+            categoriaResu.text = categoria+stringCategoria
+
 
         }
     }

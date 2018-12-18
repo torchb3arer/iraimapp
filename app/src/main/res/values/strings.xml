@@ -11,4 +11,6 @@
     <string name="mg_dl">Mg/dl</string>
     <string name="kg">Kg</string>
     <string name="anos">Años</string>
+    <string name="tfg">TFG</string>
+    <string name="categoria">CATEGORIA</string>
 </resources>
